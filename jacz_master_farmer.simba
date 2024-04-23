@@ -11,7 +11,7 @@ type
   ETask = (
     MINE_CIRCLET,
     MINE_HUMIDIFY, // Working Based On My Tests
-    MINE_NO_HUMIDIFY // Not Working
+    MINE_NO_HUMIDIFY // Working with no fail safe!
   );
 
 var
@@ -96,7 +96,6 @@ begin
   RSRock.Filter.UpText := False;
 
   DropList := ['Granite (500g)', 'Granite (2kg)', 'Granite (5kg)']; // This just adds the bare minimum
-  //TerminateScript(ETask.);
   if CurrentTask = ETask.MINE_HUMIDIFY then // Sets the drop list if using the luna spellbook
     DropList := ['Granite (500g)', 'Granite (2kg)', 'Granite (5kg)'];
   if CurrentTask = ETask.MINE_CIRCLET then // Sets the drop list if using the Circlet
